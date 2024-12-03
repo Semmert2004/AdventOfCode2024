@@ -1,3 +1,5 @@
+import time
+
 def part_1(input):
  total = 0
  x = True
@@ -37,8 +39,13 @@ def part_2(input):
     total = total + int(c[0]) * int(c[1]) 
  return total
 
+start = time.time()
+
 f = open("day3text.txt", "r")
 g = open("day3text.txt", "r")
 
-print(part_1(f.read()))
-print(part_2(g.read()))
+print( "RESULT OF PART 1: " + str(part_1(f.read())))
+print("RESULT OF PART 2: " + str(part_2(g.read())))
+
+end =time.time()
+print("TIME YOUR PROGRAM RAN FOR: " + str(end-start))
